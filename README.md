@@ -120,6 +120,39 @@ low_priority = {
 
 
 
+## 📑 Inputs
+| Name                                     | Description                                                                         | Type     | Default | Required |
+| ---------------------------------------- | ----------------------------------------------------------------------------------- | -------- | ------- | -------- |
+| compute_environments                     | Map of compute environment definitions to create                                    | `any`    | `{}`    | no       |
+| create                                   | Controls if resources should be created (affects nearly all resources)              | `bool`   | `true`  | no       |
+| create_instance_iam_role                 | Determines whether an IAM role is created or to use an existing IAM role            | `bool`   | `true`  | no       |
+| create_job_queues                        | Determines whether to create job queues                                             | `bool`   | `true`  | no       |
+| create_service_iam_role                  | Determines whether an IAM role is created or to use an existing IAM role            | `bool`   | `true`  | no       |
+| create_spot_fleet_iam_role               | Determines whether an IAM role is created or to use an existing IAM role            | `bool`   | `false` | no       |
+| instance_iam_role_additional_policies    | Additional policies to be added to the IAM role                                     | `map`    | `{}`    | no       |
+| instance_iam_role_description            | Cluster instance IAM role description                                               | `string` | `null`  | no       |
+| instance_iam_role_name                   | Cluster instance IAM role name                                                      | `string` | `null`  | no       |
+| instance_iam_role_path                   | Cluster instance IAM role path                                                      | `string` | `null`  | no       |
+| instance_iam_role_permissions_boundary   | ARN of the policy that is used to set the permissions boundary for the IAM role     | `string` | `null`  | no       |
+| instance_iam_role_tags                   | A map of additional tags to add to the IAM role created                             | `map`    | `{}`    | no       |
+| instance_iam_role_use_name_prefix        | Determines whether the IAM role name (instance_iam_role_name) is used as a prefix   | `string` | `true`  | no       |
+| job_queues                               | Map of job queue and scheduling policy definitions to create                        | `any`    | `{}`    | no       |
+| service_iam_role_additional_policies     | Additional policies to be added to the IAM role                                     | `null`   | `{}`    | no       |
+| service_iam_role_description             | Batch service IAM role description                                                  | `string` | `null`  | no       |
+| service_iam_role_name                    | Batch service IAM role name                                                         | `string` | `null`  | no       |
+| service_iam_role_path                    | Batch service IAM role path                                                         | `string` | `null`  | no       |
+| service_iam_role_permissions_boundary    | ARN of the policy that is used to set the permissions boundary for the IAM role     | `string` | `null`  | no       |
+| service_iam_role_tags                    | A map of additional tags to add to the IAM role created                             | `map`    | `{}`    | no       |
+| service_iam_role_use_name_prefix         | Determines whether the IAM role name (service_iam_role_name) is used as a prefix    | `bool`   | `true`  | no       |
+| spot_fleet_iam_role_additional_policies  | Additional policies to be added to the IAM role                                     | `list`   | `{}`    | no       |
+| spot_fleet_iam_role_description          | Spot fleet IAM role description                                                     | `string` | `null`  | no       |
+| spot_fleet_iam_role_name                 | Spot fleet IAM role name                                                            | `string` | `null`  | no       |
+| spot_fleet_iam_role_path                 | Spot fleet IAM role path                                                            | `string` | `null`  | no       |
+| spot_fleet_iam_role_permissions_boundary | ARN of the policy that is used to set the permissions boundary for the IAM role     | `string` | `null`  | no       |
+| spot_fleet_iam_role_tags                 | A map of additional tags to add to the IAM role created                             | `map`    | `{}`    | no       |
+| spot_fleet_iam_role_use_name_prefix      | Determines whether the IAM role name (spot_fleet_iam_role_name) is used as a prefix | `bool`   | `true`  | no       |
+| tags                                     | A map of tags to add to all resources                                               | `map`    | `{}`    | no       |
+
 
 
 
