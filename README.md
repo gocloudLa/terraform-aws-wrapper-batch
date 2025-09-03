@@ -19,7 +19,7 @@ The Terraform wrapper for AWS Batch defines the configuration of the compute env
 ### 🔗 External Modules
 | Name | Version |
 |------|------:|
-| [terraform-aws-modules/batch/aws](https://github.com/terraform-aws-modules/batch-aws) | 3.0.3 |
+| <a href="https://github.com/terraform-aws-modules/terraform-aws-batch" target="_blank">terraform-aws-modules/batch/aws</a> | 3.0.3 |
 
 
 
@@ -27,7 +27,7 @@ The Terraform wrapper for AWS Batch defines the configuration of the compute env
 ```hcl
 batch_parameters = {
     "00" = {
-      # Cantidad de cpu a utilizar por los compute environments
+      # Amount of CPU to use for compute environments
       #max_vcpus = 4 # Default: 4
     }
   }
@@ -137,7 +137,7 @@ low_priority = {
 | instance_iam_role_tags                   | A map of additional tags to add to the IAM role created                             | `map`    | `{}`    | no       |
 | instance_iam_role_use_name_prefix        | Determines whether the IAM role name (instance_iam_role_name) is used as a prefix   | `string` | `true`  | no       |
 | job_queues                               | Map of job queue and scheduling policy definitions to create                        | `any`    | `{}`    | no       |
-| service_iam_role_additional_policies     | Additional policies to be added to the IAM role                                     | `null`   | `{}`    | no       |
+| service_iam_role_additional_policies     | Additional policies to be added to the IAM role                                     | `map`    | `{}`    | no       |
 | service_iam_role_description             | Batch service IAM role description                                                  | `string` | `null`  | no       |
 | service_iam_role_name                    | Batch service IAM role name                                                         | `string` | `null`  | no       |
 | service_iam_role_path                    | Batch service IAM role path                                                         | `string` | `null`  | no       |
