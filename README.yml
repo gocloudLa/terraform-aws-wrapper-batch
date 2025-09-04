@@ -126,4 +126,3 @@ input_table: |
   | spot_fleet_iam_role_permissions_boundary | ARN of the policy that is used to set the permissions boundary for the IAM role | `string` | `null` | no |
   | spot_fleet_iam_role_tags | A map of additional tags to add to the IAM role created | `map` | `{}` | no |
   | spot_fleet_iam_role_use_name_prefix | Determines whether the IAM role name (spot_fleet_iam_role_name) is used as a prefix | `bool` | `true` | no |
-  | tags | A map of tags to add to all resources | `map` | `{}` | no |
