@@ -121,5 +121,5 @@ module "batch" {
   spot_fleet_iam_role_tags                 = try(each.value.spot_fleet_iam_role_tags, var.batch_defaults.spot_fleet_iam_role_tags, {})
   spot_fleet_iam_role_use_name_prefix      = try(each.value.spot_fleet_iam_role_use_name_prefix, var.batch_defaults.spot_fleet_iam_role_use_name_prefix, true)
 
-  tags = local.common_tags
+  tags = merge(local.common_tags, try(each.value.tags, var.batch_defaults.tags, null))
 }
